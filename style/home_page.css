@@ -1,0 +1,104 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+body{
+    padding: 0;
+    margin:0;
+}
+/* menu nav bar  */
+#conteudo{
+    display: flex;
+    width: 100%;;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    z-index:999;
+    background-color: darkblue;
+} 
+#showMenu, #hideMenu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5px;
+    background-color: transparent;
+    color:black;
+    font-family: 'PT Sans';
+    font-size:18px;
+    border:none;
+    border-radius: 5px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 90px;
+  }
+  
+    
+    #nav {
+      position: fixed;
+      top: 0px;
+      right: -255px; /*joga ele para trás, para fora da tela, mais ele ainda está lá*/
+      bottom: 0px;
+      width: 200px;  
+      height: auto;
+      background-color: white;
+      box-shadow: 0px 0px 10px black;
+      transition: right 0.5s linear;
+      z-index:999;
+    }
+    
+    #nav.show {
+      right: 0px;/*joga ele para frente, onde o usuário consegue ver */
+    }
+    #nav_list{
+      display: flex;
+      flex-direction: column;
+      flex-flow:nowrap;
+      flex-wrap: wrap;
+      justify-content:flex-start;
+      align-items:center;
+      align-content:center;
+      list-style-type: none;
+      padding: 0%;
+    }
+    
+    .nav_item{
+      text-decoration: none;
+      color:black;
+      margin: 10px;
+      font-family: 'PT Sans';
+      cursor: pointer;
+      font-size: 19px;
+    }
+    
+    .menu_divisor{
+      width:100%;
+      
+  }
+/* banner home page  */
+#banner{
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+	min-height:100vh;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+    background-image: url('img1/banner_home.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:20%;
+    justify-content: center;
+    align-items: center;
+}
+#ler_mais{
+    display:flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    align-items: center;
+}
+#ler_mais a{
+    text-decoration: none;
+    color:black;
+}
